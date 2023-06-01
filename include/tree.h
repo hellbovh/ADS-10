@@ -12,7 +12,7 @@ struct Node {
 };
 
 class Tree {
-private:
+ private:
   Node* root;
   std::vector<std::vector<char>> perms;
   void insertNode(Node * root, const std::vector<char>&chars) {
@@ -25,7 +25,7 @@ private:
       insertNode(tnode, remainch);
     }
   }
-  
+
   void findPerm(Node * root, std::vector<char> chars) {
     if (!root->isRoot)
       chars.push_back(root->ch);
@@ -37,8 +37,8 @@ private:
       }
     }
   }
-
-public:
+  
+ public:
   explicit Tree(const std::vector<char>&chars) {
     root = new Node;
     root->isRoot = true;
