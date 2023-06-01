@@ -31,8 +31,7 @@ private:
       chars.push_back(root->ch);
     if (root->nodes.empty()) {
       perms.push_back(chars);
-    }
-    else {
+    } else {
       for (Node* child : root->nodes) {
         findPerm(child, chars);
       }
